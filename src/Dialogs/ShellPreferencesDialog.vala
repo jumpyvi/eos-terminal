@@ -61,9 +61,9 @@ public class Terminal.Dialogs.ShellPreferences : Granite.Dialog {
         apply_button.add_css_class (Granite.CssClass.SUGGESTED);
         apply_button.clicked.connect (() => {
             var shell_str = shell_entry.text.strip ();
-            if (shell_str.length < 1){
+            if (shell_str.length < 1) {
                 Application.settings.reset ("shell");
-            }else{
+            } else {
                 Application.settings.set_string ("shell", shell_entry.text.strip ());
             }
             close ();
